@@ -5,10 +5,65 @@
 :root {
 
 
+--input-border-color: #bbbbbb;
+
+--t-font-common-base: {
+  font-family: var(--primary-font-family);
+  -webkit-font-smoothing: antialiased;
+};
+--t-form-transition-easing: {
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+--t-font-caption: {
+	@apply(--t-font-common-base);
+	@apply(--t-font-common-nowrap);
+
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0.011em;
+	line-height: 20px;
+};
+--t-font-common-nowrap: {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+};
+
+--t-font-subhead: {
+  @apply(--t-font-common-base);
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+};
+
+--t-input-container-label: {
+	/*apply t-input-container label style */
+}
+--t-input-container-label-floating: {
+	/*apply t-input-container when floating label style */
+}
+--t-input-container-input:{
+	/*apply t-input-container value style */
+}
+
+/* Style start Autosuggest */
+
+
+--autosuggest-item-text-size:12px;
+--autosuggest-item-text-color:var(--grey-four);
+--autosuggest-item-bg-color:#fafafa;
+--autosuggest-item-border-color: var(--input-border-color);
+--autosuggest-item-padding: 12px 10px;
+
 /*Common styles*/
---form-label-color:var(--grey-four);
+--form-label-color: var(--light-primary-color);
 --form-label-size:16px;
 --form-label-margin:10px;
+--form-border-color: var(--light-primary-color);
+ --form-value-color: var(--grey-four);
 
 --form-label-mobile-size: 12px;
 --form-label-mobile-margin:5px;
@@ -20,13 +75,8 @@
 --standard-input-field-text-size:16px;
 
 /*Calendar*/
---calendar-input-border-color:var(--light-primary-color);
-
---calendar-input-placeholder-color:#ccc;
 
 --calendar-box-background-color:#fff;
---calendar-input-text-size:var(--standard-input-field-text-size);
---calendar-input-value-color:var(--grey-four);
 
 --calendar-year-month-text-color:var(--grey-five);
 
@@ -109,19 +159,6 @@
 --icon-bg-color:transparent;
 --button-icon-size:24px;
 
-/* Style start Autosuggest */
-
---autosuggest-input-border-color: var(--light-primary-color);
---autosuggest-input-text-size: var(--standard-input-field-text-size);
-
---autosuggest-input-placeholder-color:#ccc;
---autosuggest-input-value-color:var(--grey-four);
-
---autosuggest-item-text-size:12px;
---autosuggest-item-text-color:var(--grey-four);
---autosuggest-item-bg-color:#fafafa;
---autosuggest-item-border-color:#eee;
---autosuggest-item-padding: 12px 10px;
 
 /* Start t-table */
 --table-header-bg: var(--grey-four);
@@ -170,9 +207,7 @@
 --section-header-bg-color: var(--grey-two);
 
 /* Input Style for both text area and input */
---t-input-field-text-size: var(--standard-input-field-text-size);
 
---t-input-border-color: var(--light-primary-color);
 
 /* Range Slider  */
 
